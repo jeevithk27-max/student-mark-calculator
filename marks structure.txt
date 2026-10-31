@@ -1,0 +1,5 @@
+Student-Marks-Calculator/
+│
+├── index.html
+├── style.css
+└── script.js

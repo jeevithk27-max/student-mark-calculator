@@ -1,0 +1,59 @@
+function calculate() {
+
+    let marks = [];
+
+    for (let i = 1; i <= 6; i++) {
+
+        let mark = document.getElementById("s" + i).value;
+
+        if (mark === "" || Number(mark) < 0 ||
+            Number(mark) > 100) {
+            alert("Enter valid marks between 0 and 100!");
+            return;
+        }
+
+        marks.push(Number(mark));
+    }
+
+    let total = 0;
+
+    for (let i = 0; i < 6; i++) {
+        total += marks[i];
+    }
+
+    let average = total / 6;
+    let percentage = (total / 600) * 100;
+
+    let grade;
+
+    if (percentage >= 90) {
+        grade = "A+";
+    }
+    else if (percentage >= 80) {
+        grade = "A";
+    }
+    else if (percentage >= 70) {
+        grade = "B";
+    }
+    else if (percentage >= 60) {
+        grade = "C";
+    }
+    else if (percentage >= 50) {
+        grade = "D";
+    }
+    else {
+        grade = "F";
+    }
+
+    document.getElementById("total").innerHTML =
+        "Total: " + total + " / 600";
+
+    document.getElementById("average").innerHTML =
+        "Average: " + average.toFixed(2);
+
+    document.getElementById("percentage").innerHTML =
+        "Percentage: " + percentage.toFixed(2) + "%";
+
+    document.getElementById("grade").innerHTML =
+        "Grade: " + grade;
+}

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Marks Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>Student Marks Calculator</h1>
+    <p>Enter your marks in 6 subjects</p>
+
+    <input type="number" id="s1" placeholder="Subject 1">
+    <input type="number" id="s2" placeholder="Subject 2">
+    <input type="number" id="s3" placeholder="Subject 3">
+    <input type="number" id="s4" placeholder="Subject 4">
+    <input type="number" id="s5" placeholder="Subject 5">
+    <input type="number" id="s6" placeholder="Subject 6">
+
+    <button onclick="calculate()">Calculate Result</button>
+
+    <div class="result">
+        <h3 id="total">Total: 0</h3>
+        <h3 id="average">Average: 0</h3>
+        <h3 id="percentage">Percentage: 0%</h3>
+        <h2 id="grade">Grade: -</h2>
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
